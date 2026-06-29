@@ -84,13 +84,6 @@ export default function RegisterPage() {
               </div>
             )}
 
-            {state?.success && (
-              <div className="rounded-md bg-green-50 p-4 border border-green-200">
-                <div className="flex">
-                  <div className="text-sm font-medium text-green-800">{state.success}</div>
-                </div>
-              </div>
-            )}
 
             <div>
               <button
