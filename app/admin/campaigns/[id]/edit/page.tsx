@@ -13,7 +13,7 @@ export default async function AdminEditCampaignPage({ params }: PageProps) {
   // Fetch campaign
   const { data: campaign } = await supabase
     .from("campaigns")
-    .select("id, title, description, target_amount, category_id, status, image_url, fundraiser_id")
+    .select("id, title, description, target_amount, category_id, status, image_url, fundraiser_id, currency")
     .eq("id", id)
     .single();
 
@@ -53,6 +53,7 @@ export default async function AdminEditCampaignPage({ params }: PageProps) {
     category_id: campaign.category_id,
     status: campaign.status,
     image_url: campaign.image_url,
+    currency: campaign.currency,
   };
 
   return (

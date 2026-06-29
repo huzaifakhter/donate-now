@@ -1,7 +1,7 @@
 "use server";
 
 import { createClient, createAdminClient } from "@/lib/supabase/server";
-import { redirect, isRedirectError } from "next/navigation";
+import { redirect } from "next/navigation";
 import { headers } from "next/headers";
 
 export async function login(state: any, formData: FormData) {
