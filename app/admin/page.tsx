@@ -26,7 +26,7 @@ interface RecentDonation {
   campaign_title: string;
 }
 
-async function getDashboardData(): Promise<{ stats: DashboardStats; recentDonations: RecentDonation[]; adminCurrency: string }> {
+async function getDashboardData(): Promise<{ stats: DashboardStats; recentDonations: RecentDonation[]; adminCurrency: string; popularCategories: any[] }> {
   const defaultStats = {
     totalRaised: 12450.00 + 45000.00 + 8200.00, // Matching campaign data from Phase 1
     activeCampaigns: 3,
